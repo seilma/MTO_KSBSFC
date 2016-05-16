@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="pswOublie" onMouseClicked="#loginAc" prefHeight="620.0" prefWidth="1024.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mto.cr.GUI.MotDePasseOublieController">
+    <stylesheets>
+        <URL value="@newCascadeStyleSheet.css" />
+    </stylesheets>
+   <children>
+      <Button fx:id="buttonMail" layoutX="599.0" layoutY="317.0" mnemonicParsing="false" onAction="#SendMail" prefHeight="42.0" prefWidth="316.0" styleClass="buttonLogin" text="Envoyer un Mail" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <TextField fx:id="email" layoutX="600.0" layoutY="271.0" onMouseClicked="#disableAlert" prefHeight="27.0" prefWidth="310.0" />
+      <Text layoutX="495.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adresse email" />
+      <Text fill="RED" layoutX="582.0" layoutY="291.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*" />
+      <Text fill="#8c8c8c" layoutX="87.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Note : MTO ne publiera jamais aucune information sur vos réseaux">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Text>
+      <Text fill="#8c8c8c" layoutX="171.0" layoutY="419.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" sans votre autorisation.">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Line endX="60.0" fill="#8c8c8c" layoutX="443.0" layoutY="296.0" opacity="0.5" rotate="90.0" startX="5.0" stroke="#8c8c8c">
+         <effect>
+            <Blend opacity="0.0" />
+         </effect>
+      </Line>
+      <Line endX="60.0" fill="#8c8c8c" layoutX="443.0" layoutY="395.0" opacity="0.5" rotate="90.0" startX="5.0" stroke="#8c8c8c">
+         <effect>
+            <Blend opacity="0.0" />
+         </effect>
+      </Line>
+      <Text fill="#8c8c8c" layoutX="469.0" layoutY="348.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="ou">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Text fill="#434343" layoutX="232.0" layoutY="91.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="Connectez-vous à votre compte MTOCrowdRise">
+         <font>
+            <Font name="Helvetica Neue" size="24.0" />
+         </font>
+      </Text>
+      <Text layoutX="357.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pas encore inscrit ? " />
+      <Button fx:id="buttonCree" layoutX="499.0" layoutY="104.0" mnemonicParsing="false" onAction="#CreeAc" styleClass="buttonCree" text="CRÉER MON COMPTE" textFill="#a6cc45">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Button>
+      <Line endX="1024.0" fill="#8c8c8c" layoutX="-5.0" layoutY="188.0" opacity="0.2" startX="5.0" stroke="#8c8c8c">
+         <effect>
+            <Blend opacity="0.0" />
+         </effect>
+      </Line>
+      <Line endX="1024.0" fill="#8c8c8c" layoutX="-5.0" layoutY="534.0" opacity="0.2" startX="5.0" stroke="#8c8c8c">
+         <effect>
+            <Blend opacity="0.0" />
+         </effect>
+      </Line>
+      <Text fill="#353535" layoutX="538.0" layoutY="556.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="L'equity crowdfunding ou ">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Text>
+      <Text fill="#a6cc45" layoutX="651.0" layoutY="556.0" strokeType="OUTSIDE" strokeWidth="0.0" text="financement participatif ">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text layoutX="539.0" layoutY="582.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="de se regrouper pour investir au capital de jeunes entreprises innovantes.">
+         <font>
+            <Font name="Helvetica Neue" size="9.0" />
+         </font>
+      </Text>
+      <Text fill="#353535" layoutX="769.0" layoutY="556.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="de MTO permet à des particuliers">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Text>
+      <Text layoutX="139.0" layoutY="556.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="Le">
+         <font>
+            <Font name="Helvetica Neue" size="9.0" />
+         </font></Text>
+      <Text fill="#a6cc45" layoutX="150.0" layoutY="556.0" strokeType="OUTSIDE" strokeWidth="0.0" text="crowdSourcing">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text fill="#353535" layoutX="223.0" layoutY="556.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="permet de rassembler les connaissainces collectives à ">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </Text>
+      <Text layoutX="139.0" layoutY="581.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text="travers des discussions professionnelles et de profiter de l'experience de nos">
+         <font>
+            <Font name="Helvetica Neue" size="9.0" />
+         </font>
+      </Text>
+      <Text layoutX="139.0" layoutY="606.0" opacity="0.8" strokeType="OUTSIDE" strokeWidth="0.0" text=" collaborateurs qui serons évalués selon leurs connaissances.">
+         <font>
+            <Font name="Helvetica Neue" size="9.0" />
+         </font>
+      </Text>
+      <Button fx:id="buttonError" layoutX="600.0" layoutY="225.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="310.0" styleClass="buttonError" text="Veuillez Verifier votre adresse Mail" textFill="#fffffe" />
+      <ImageView fitHeight="137.0" fitWidth="195.0" layoutX="131.0" layoutY="242.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/flying_paperplane.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="buttonRetLogin" layoutX="657.0" layoutY="102.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="104.0" styleClass="buttonCree" text="Login" textFill="#a6cc45" />
+   </children>
+</AnchorPane>

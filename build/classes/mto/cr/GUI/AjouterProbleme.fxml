@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1024.0" styleClass="AnchorPane" stylesheets="@newCascadeStyleSheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mto.cr.GUI.AjouterProblemeController">
+   <children>
+      <TextArea fx:id="description" layoutX="381.0" layoutY="271.0" prefHeight="41.0" prefWidth="200.0" />
+      <Label layoutX="383.0" layoutY="323.0" text="niveau requis" textFill="#80b201" />
+      <SplitMenuButton fx:id="secteur" blendMode="SRC_ATOP" cacheShape="false" centerShape="false" layoutX="392.0" layoutY="420.0" mnemonicParsing="false" onAction="#changetextSecteur" prefHeight="25.0" prefWidth="112.0" scaleShape="false" stylesheets="@MTOCrowdRise.css" text="secteur" textFill="#f2eeee">
+        <items>
+          <MenuItem fx:id="Informatique" mnemonicParsing="false" onAction="#Informatique" text="Informatique" />
+          <MenuItem fx:id="agriculture" mnemonicParsing="false" onAction="#agriculture" text="Agriculture" />
+        </items>
+         <styleClass>
+            <String fx:value="buttonMonProfil" />
+            <String fx:value="buttonLogin" />
+         </styleClass>
+      </SplitMenuButton>
+      <Label fx:id="label_ajouter" layoutX="379.0" layoutY="129.0" prefHeight="52.0" prefWidth="200.0" styleClass="titre" stylesheets="@MTOCrowdRise.css" text="Ajouter problème">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="382.0" layoutY="251.0" text="desciprtion" textFill="#80b201" />
+      <Button fx:id="modifierBtn" layoutX="643.0" layoutY="507.0" mnemonicParsing="false" styleClass="buttonLogin" stylesheets="@MTOCrowdRise.css" text="modifier mon probleme" />
+      <TextField fx:id="titre" layoutX="382.0" layoutY="202.0" />
+      <Label layoutX="380.0" layoutY="181.0" text="Nom du probleme" textFill="#80b201" />
+      <Button fx:id="ajouterBtn" layoutX="654.0" layoutY="507.0" mnemonicParsing="false" onAction="#ajouterProbleme" styleClass="buttonLogin" stylesheets="@MTOCrowdRise.css" text="creer mon probleme" />
+      <Label layoutX="397.0" layoutY="400.0" text="secteur" textFill="#80b201" />
+      <TextField fx:id="niveaurequis" layoutX="385.0" layoutY="344.0" onKeyTyped="#testEcriture" />
+      <Pane prefHeight="93.0" prefWidth="1085.0" styleClass="BlackBackGround" stylesheets="@MTOCrowdRise.css">
+         <children>
+            <Pane fx:id="dropDownMenu" layoutX="695.0" layoutY="13.0" prefHeight="64.0" prefWidth="219.0">
+               <children>
+                  <Text fx:id="varUsernameToolBar" fill="#ebebeb" layoutX="100.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
+                  <ImageView fx:id="varPhotoProfilToolBar" fitHeight="59.0" fitWidth="63.0" layoutX="8.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="varPhotoProfilToolBar1" fitHeight="59.0" fitWidth="63.0" layoutX="22.0" layoutY="3.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/comments-xxl.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <ImageView fx:id="home" fitHeight="74.0" fitWidth="77.0" layoutX="68.0" layoutY="14.0" onMouseClicked="#retourForum" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/immo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="MTOCrowdRiseJava.jnlp">
+  <information>
+    <title>MTOCrowdRiseJava</title>
+    <vendor>PC</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="MTOCrowdRiseJava.jar" size="3577814" download="eager" />
+    <jar href="lib\GMapsFX-1.1.1.jar" size="80262" download="eager" />
+    <jar href="lib\RXTXcomm.jar" size="60984" download="eager" />
+    <jar href="lib\SMSLib.jar" size="79717" download="eager" />
+    <jar href="lib\TrayTester.jar" size="52070" download="eager" />
+    <jar href="lib\activation-1.1.jar" size="62983" download="eager" />
+    <jar href="lib\commons-fileupload-1.3.1.jar" size="69002" download="eager" />
+    <jar href="lib\commons-net-3.0.1.jar" size="269014" download="eager" />
+    <jar href="lib\dsn.jar" size="18073" download="eager" />
+    <jar href="lib\geocoder-java-0.15.jar" size="29132" download="eager" />
+    <jar href="lib\gson-2.2.2.jar" size="189285" download="eager" />
+    <jar href="lib\iReport.jar" size="4319224" download="eager" />
+    <jar href="lib\imap.jar" size="172582" download="eager" />
+    <jar href="lib\jasperreports-1.2.1.jar" size="1254015" download="eager" />
+    <jar href="lib\jsmpp-2.1.0.jar" size="303244" download="eager" />
+    <jar href="lib\log4j-1.2.17.jar" size="489883" download="eager" />
+    <jar href="lib\mail-1.4.7.jar" size="521157" download="eager" />
+    <jar href="lib\mailapi.jar" size="250234" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+    <jar href="lib\org-apache-commons-logging.jar" size="60786" download="eager" />
+    <jar href="lib\pop3.jar" size="36334" download="eager" />
+    <jar href="lib\slf4j-api-1.6.3.jar" size="25689" download="eager" />
+    <jar href="lib\slf4j-log4j12-1.6.3.jar" size="9748" download="eager" />
+    <jar href="lib\smslib-3.5.3.jar" size="314999" download="eager" />
+    <jar href="lib\smtp.jar" size="44993" download="eager" />
+    <jar href="lib\wicketstuff-gmap3-examples-6.10.0-sources.jar" size="49606" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="MTOCrowdRiseJava" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="mto.cr.GUI.MTOCrowdRiseJava"  name="MTOCrowdRiseJava" />
+  <update check="always"/>
+</jnlp>

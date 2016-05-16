@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.*?>
+<?import javafx.scene.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="1024.0" styleClass="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mto.cr.GUI.ProblemeController">
+    <children>
+    
+                   
+      <AnchorPane layoutX="76.0" layoutY="73.0" prefHeight="513.0" prefWidth="908.0">
+         <children>
+            <VBox layoutY="71.0" prefHeight="154.0" prefWidth="854.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox prefHeight="83.0" prefWidth="80.0">
+                           <children>
+                              <HBox prefHeight="35.0" prefWidth="99.0">
+                                 <children>
+                                    <Pane prefHeight="31.0" prefWidth="102.0" />
+                                    <Label fx:id="userNameP" prefHeight="23.0" prefWidth="100.0" text="user" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="74.0" prefWidth="78.0">
+                                 <children>
+                                    <Pane prefHeight="200.0" prefWidth="200.0" />
+                                    <ImageView fx:id="userImageP" fitHeight="59.0" fitWidth="62.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@opct_7f9651786bec0fc4af339e5ba6c7ac58c0c505f6.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <VBox prefHeight="100.0" prefWidth="503.0">
+                           <children>
+                              <Pane>
+                                 <children>
+                                    <Text id="titreprobleme" fx:id="secteur" fill="#496601" layoutX="445.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Secteur" wrappingWidth="71.3876953125">
+                                       <font>
+                                          <Font name="System Bold Italic" size="9.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </Pane>
+                              <TextArea id="text-area" fx:id="contenue" editable="false" prefHeight="106.0" prefWidth="503.0" styleClass="text-area" stylesheets="@MTOCrowdRise.css" />
+                           </children>
+                        </VBox>
+                        <Pane prefHeight="30.0" prefWidth="74.0">
+                           <children>
+                              <VBox layoutY="-6.0" prefHeight="134.0" prefWidth="75.0">
+                                 <children>
+                                    <Pane fx:id="supprimerPane" onMouseClicked="#supprimerProb">
+                                       <children>
+                                          <ImageView fitHeight="48.0" fitWidth="25.0" layoutX="9.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/delete.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </Pane>
+                                    <Pane fx:id="resoluePane" onMouseClicked="#resoudreProb">
+                                       <children>
+                                          <ImageView fitHeight="31.0" fitWidth="71.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/valider-coop.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Pane />
+                                       </children>
+                                    </Pane>
+                                    <Pane fx:id="modifierPane" onMouseClicked="#modifierProb">
+                                       <children>
+                                          <ImageView fitHeight="40.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/images.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Pane>
+                     </children>
+                  </HBox>
+                  <VBox prefHeight="41.0" prefWidth="600.0">
+                     <children>
+                        <HBox prefHeight="42.0" prefWidth="814.0">
+                           <children>
+                              <VBox layoutY="5.0" prefHeight="41.0" prefWidth="82.0" />
+                              <Pane layoutY="5.0" prefHeight="0.0" prefWidth="496.0" style="-fx-border-radius: 0.9; -fx-border-width: 3;" stylesheets="@MTOCrowdRise.css">
+                                 <padding>
+                                    <Insets bottom="3.0" left="3.0" right="3.0" top="1.0" />
+                                 </padding>
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f8b4" height="31.0" layoutY="1.0" stroke="BLACK" strokeType="INSIDE" width="503.0" />
+                                    <ImageView fitHeight="24.0" fitWidth="48.0" layoutX="1.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/comments-xxl.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Text fx:id="ncom" layoutX="169.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font>
+                                    </Text>
+                                    <Text fx:id="dateProbleme" layoutX="357.0" layoutY="14.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="134.6949462890625">
+                                       <font>
+                                          <Font size="9.0" />
+                                       </font>
+                                    </Text>
+                                    <Label layoutX="38.0" layoutY="5.0" text="COMMENTAIRES" textFill="#787878" />
+                                 </children>
+                              </Pane>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <Pane fx:id="pane" layoutX="22.0" layoutY="320.0">
+               <children>
+                  <VBox fx:id="vbox1" prefHeight="82.0" prefWidth="731.0">
+                     <children>
+                        <HBox prefHeight="78.0" prefWidth="767.0">
+                           <children>
+                              <Pane prefHeight="84.0" prefWidth="25.0">
+                                 <children>
+                                    <Pane fx:id="voteplus" onDragDetected="#voteplus" onMouseClicked="#voteplus" prefHeight="25.0" prefWidth="31.0">
+                                       <children>
+                                          <ImageView id="btn_votemoins" fitHeight="31.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/down-yellow-arrow-icon-hi.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </Pane>
+                                    <Pane fx:id="votemoins" layoutY="47.0" prefHeight="31.0" prefWidth="31.0">
+                                       <children>
+                                          <ImageView id="btn_voteplus" fitHeight="31.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/down-yellow-arrow-icon-hi1.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </Pane>
+                                    <Text fx:id="nbrVote" layoutX="7.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" wrappingWidth="12.0" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="78.0" prefWidth="33.0" />
+                              <VBox prefHeight="78.0" prefWidth="68.0">
+                                 <children>
+                                    <HBox prefHeight="35.0" prefWidth="99.0">
+                                       <children>
+                                          <Label fx:id="userName" prefHeight="17.0" prefWidth="85.0" text="user" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="61.0" prefWidth="73.0">
+                                       <children>
+                                          <ImageView fx:id="photoCommentaire" fitHeight="61.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@opct_7f9651786bec0fc4af339e5ba6c7ac58c0c505f6.jpg" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="78.0" prefWidth="512.0">
+                                 <children>
+                                    <TextArea fx:id="com" prefHeight="200.0" prefWidth="200.0" />
+                                 </children>
+                              </VBox>
+                              <Pane prefHeight="39.0" prefWidth="53.0">
+                                 <children>
+                                    <VBox layoutY="-3.0" prefHeight="86.0" prefWidth="67.0">
+                                       <children>
+                                          <Pane fx:id="modifierCommentairePane" onMouseClicked="#modifierCommentaire1" prefHeight="37.0" prefWidth="24.0">
+                                             <children>
+                                                <ImageView fitHeight="25.0" fitWidth="53.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/images.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </Pane>
+                                          <Pane fx:id="supprimerCommentairePane" onMouseClicked="#supprimerCommentaire1" prefHeight="50.0" prefWidth="49.0">
+                                             <children>
+                                                <ImageView fitHeight="29.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/delete.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </VBox>
+                                    <Pane fx:id="validermodification" onMouseClicked="#validerModificationCommentaire1" visible="false">
+                                       <children>
+                                          <ImageView fitHeight="29.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/valider-coop.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                        <VBox prefHeight="65.0" prefWidth="708.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox prefHeight="25.0" prefWidth="62.0" />
+                                    <VBox prefHeight="41.0" prefWidth="53.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Pane />
+                        <Pane />
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vbox11" prefHeight="82.0" prefWidth="731.0">
+                     <children>
+                        <HBox prefHeight="78.0" prefWidth="767.0">
+                           <children>
+                              <Pane prefHeight="84.0" prefWidth="25.0">
+                                 <children>
+                                    <Pane fx:id="voteplus1" onDragDetected="#voteplus" onMouseClicked="#voteplus" prefHeight="25.0" prefWidth="31.0">
+                                       <children>
+                                          <ImageView id="btn_votemoins" fitHeight="31.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/down-yellow-arrow-icon-hi.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </Pane>
+                                    <Pane fx:id="votemoins1" layoutY="47.0" prefHeight="31.0" prefWidth="31.0">
+                                       <children>
+                                          <ImageView id="btn_voteplus" fitHeight="31.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/down-yellow-arrow-icon-hi1.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </Pane>
+                                    <Text fx:id="nbrVote1" layoutX="7.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" wrappingWidth="12.0" />
+                                 </children>
+                              </Pane>
+                              <Pane prefHeight="78.0" prefWidth="33.0" />
+                              <VBox prefHeight="78.0" prefWidth="68.0">
+                                 <children>
+                                    <HBox prefHeight="35.0" prefWidth="99.0">
+                                       <children>
+                                          <Label fx:id="userName1" prefHeight="17.0" prefWidth="85.0" text="user" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="61.0" prefWidth="73.0">
+                                       <children>
+                                          <ImageView fx:id="photoCommentaire1" fitHeight="61.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@opct_7f9651786bec0fc4af339e5ba6c7ac58c0c505f6.jpg" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="78.0" prefWidth="512.0">
+                                 <children>
+                                    <TextArea fx:id="com1" editable="false" prefHeight="200.0" prefWidth="200.0" />
+                                 </children>
+                              </VBox>
+                              <Pane prefHeight="39.0" prefWidth="53.0">
+                                 <children>
+                                    <VBox layoutY="-3.0" prefHeight="86.0" prefWidth="67.0">
+                                       <children>
+                                          <Pane fx:id="modifierCommentairePane1" onMouseClicked="#modifierCommentaire" prefHeight="37.0" prefWidth="24.0">
+                                             <children>
+                                                <ImageView fitHeight="25.0" fitWidth="53.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/images.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </Pane>
+                                          <Pane fx:id="supprimerCommentairePane1" onMouseClicked="#supprimerCommentaire" prefHeight="50.0" prefWidth="49.0">
+                                             <children>
+                                                <ImageView fitHeight="29.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/delete.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </children>
+                                          </Pane>
+                                       </children>
+                                    </VBox>
+                                    <Pane fx:id="validermodification1" onMouseClicked="#validerModificationCommentaire" visible="false">
+                                       <children>
+                                          <ImageView fitHeight="29.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/valider-coop.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </HBox>
+                        <VBox prefHeight="65.0" prefWidth="708.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox prefHeight="25.0" prefWidth="62.0" />
+                                    <VBox prefHeight="41.0" prefWidth="53.0" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Pane />
+                        <Pane />
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+            <Text id="titreprobleme" fx:id="titre" fill="#496601" layoutX="66.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TITRE" wrappingWidth="134.6949462890625">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Button id="btn_valider" fx:id="afficherCom" layoutX="75.0" layoutY="213.0" mnemonicParsing="false" onAction="#ajouterCom" prefHeight="29.0" prefWidth="135.0" styleClass="buttonLogin" stylesheets="@MTOCrowdRise.css" text="Commenter" textFill="#ebffa4" />
+            <TextArea fx:id="commentaireText" layoutX="224.0" layoutY="207.0" prefHeight="70.0" prefWidth="356.0" visible="false" />
+            <Button fx:id="insererCommentaire" layoutX="593.0" layoutY="245.0" mnemonicParsing="false" onAction="#insererCom" styleClass="buttonLogin" stylesheets="@MTOCrowdRise.css" text="inserer" visible="false" />
+            <Pane fx:id="paneResolue1" layoutX="133.0" layoutY="26.0" prefHeight="33.0" prefWidth="53.0">
+               <children>
+                  <ImageView fitHeight="59.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/case-cochee.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      
+       
+         <Pane fx:id="MonProfilMenu" layoutX="702.0" layoutY="-112.0" opacity="0.95" prefHeight="289.0" prefWidth="264.0" styleClass="monProfil" translateY="-350">
+         <children>
+            <Button fx:id="buttonAccederMonProfil" layoutX="11.0" layoutY="240.0" mnemonicParsing="false" onAction="#EnterProfileAc" prefHeight="42.0" prefWidth="238.0" styleClass="buttonLogin" text="Mon Profil" textFill="#f2ffdd">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Separator layoutX="8.0" layoutY="229.0" prefHeight="5.0" prefWidth="245.0" />
+            <ImageView fx:id="PhotoProfilMonProfil" fitHeight="64.0" fitWidth="69.0" layoutX="8.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/checked_checkbox.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="nomPrénomMonProfil" layoutX="86.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chiheb Khédhiri">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="emailMonProfil" layoutX="85.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="email@email.com" wrappingWidth="110.466552734375" />
+            <Text fill="#646464" layoutX="16.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Solde">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Text fill="#646464" layoutX="16.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mon panier">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Text fill="#646464" layoutX="16.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expériences">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Text fx:id="soldeMonProfil" fill="#646464" layoutX="80.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="200 " wrappingWidth="112.819580078125">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Text fill="#646464" layoutX="108.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Projets suivis..." wrappingWidth="134.6949462890625">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Text fill="#646464" layoutX="106.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Consulter mes expériences" wrappingWidth="144.767822265625">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Text fill="#646464" layoutX="116.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Consulter mes commentaires" wrappingWidth="144.767822265625">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Text fill="#646464" layoutX="16.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Commentaires">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Separator layoutX="8.0" layoutY="189.0" prefHeight="5.0" prefWidth="245.0" />
+            <Separator layoutX="8.0" layoutY="155.0" prefHeight="5.0" prefWidth="245.0" />
+            <Separator layoutX="8.0" layoutY="119.0" prefHeight="5.0" prefWidth="245.0" />
+            <Button layoutX="3.0" layoutY="122.0" mnemonicParsing="false" onAction="#EnterPanierAc" prefHeight="33.0" prefWidth="259.0" styleClass="buttonMonProfilSelect" />
+            <Button layoutX="3.0" layoutY="87.0" mnemonicParsing="false" onAction="#EnterSoldeAc" prefHeight="33.0" prefWidth="259.0" styleClass="buttonMonProfilSelect" />
+            <Button layoutX="3.0" layoutY="157.0" mnemonicParsing="false" onAction="#EnterExperienceAc" prefHeight="33.0" prefWidth="259.0" styleClass="buttonMonProfilSelect" />
+            <Button layoutX="3.0" layoutY="192.0" mnemonicParsing="false" onAction="#EnterCommentairesAc" prefHeight="33.0" prefWidth="259.0" styleClass="buttonMonProfilSelect" />
+         </children></Pane>
+    
+                                     
+        <Pane layoutX="-1.0" layoutY="-5.0" prefHeight="93.0" prefWidth="1031.0" styleClass="BlackBackGround">
+            <children>
+                <Pane fx:id="dropDownMenu" layoutX="697.0" layoutY="13.0" prefHeight="64.0" prefWidth="219.0">
+                    <children>
+                        <Text fx:id="varUsernameToolBar" fill="#e1e1e1" layoutX="85.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
+                  <ImageView fx:id="varPhotoProfilToolBar1" fitHeight="59.0" fitWidth="63.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/comments-xxl.png" />
+                     </image>
+                  </ImageView>
+                    </children>
+                </Pane>
+            </children>
+        </Pane>
+        <!--block content -->
+     
+     
+     
+     
+     
+        <!--endblock content -->
+        <ImageView fx:id="home" fitHeight="52.0" fitWidth="60.0" layoutX="77.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/immo.png" />
+            </image>
+        </ImageView>
+      
+        <AnchorPane fx:id="navList" layoutX="7.0" layoutY="115.0" onMouseClicked="#AccederProjetsAction" opacity="0.76" prefHeight="66.0" prefWidth="259.0" style="-fx-background-color: transparent;" styleClass="whiteBackGround" translateX="-180" AnchorPane.bottomAnchor="482.0" AnchorPane.topAnchor="115.0">
+         
+            <children>
+                <ImageView fitHeight="74.0" fitWidth="92.0" layoutX="172.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/startup.png" />
+                    </image>
+                </ImageView>
+                <Text fx:id="AccederProjets" layoutX="26.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROJETS" wrappingWidth="165.83470153808594">
+                    <font>
+                        <Font size="33.0" />
+                    </font>
+                </Text>
+                <Pane fx:id="menu" layoutX="77.0" layoutY="-12.0" prefHeight="54.0" prefWidth="226.0" />
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="navList1" layoutX="7.0" layoutY="205.0" onMouseClicked="#AccederProfilsAction" opacity="0.76" prefHeight="76.0" prefWidth="266.0" style="-fx-background-color: transparent;" styleClass="whiteBackGround" translateX="-180">
+            <children>
+                <Pane fx:id="menu1" prefHeight="54.0" prefWidth="226.0">
+               <children>
+                      <Text fx:id="AccederProfils" layoutX="31.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROFILS" wrappingWidth="165.83470153808594">
+                          <font>
+                              <Font size="33.0" />
+                          </font>
+                      </Text>
+               </children></Pane>
+                <ImageView fitHeight="86.0" fitWidth="108.0" layoutX="188.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/perso-coop.png" />
+                    </image>
+                </ImageView>
+            </children>
+        
+        </AnchorPane>
+        <AnchorPane fx:id="navList2" layoutX="7.0" layoutY="295.0" onMouseClicked="#AccederForumAction" opacity="0.76" prefHeight="73.0" prefWidth="257.0" style="-fx-background-color: transparent;" styleClass="whiteBackGround" translateX="-180">
+            <children>
+                <Pane fx:id="menu2" prefHeight="54.0" prefWidth="226.0">
+               <children>
+                      <Text fx:id="AccederForum" layoutX="40.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FORUM" wrappingWidth="165.83470153808594">
+                          <font>
+                              <Font size="33.0" />
+                          </font>
+                      </Text>
+               </children></Pane>
+                <ImageView fitHeight="74.0" fitWidth="108.0" layoutX="172.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/cooperative.png" />
+                    </image>
+                </ImageView>
+            </children>
+        
+        </AnchorPane>
+      
+      
+   </children>
+   <stylesheets>
+      <URL value="@MTOCrowdRise.css" />
+      <URL value="@newCascadeStyleSheet.css" />
+   </stylesheets>
+</AnchorPane>

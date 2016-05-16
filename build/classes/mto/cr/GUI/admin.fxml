@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="600.0" maxWidth="1024.0" minHeight="600.0" minWidth="1024.0" prefHeight="600.0" prefWidth="1024.0" styleClass="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mto.cr.GUI.AdminController">
+    <stylesheets>
+        <URL value="@newCascadeStyleSheet.css" />
+    </stylesheets>
+        <children>
+      <Pane layoutY="-5.0" maxHeight="93.0" maxWidth="1026.0" minHeight="93.0" minWidth="1037.0" prefHeight="93.0" prefWidth="1031.0" styleClass="whiteBackGround">
+         <children>
+            <Pane fx:id="dropDownMenu" layoutX="695.0" layoutY="13.0" prefHeight="64.0" prefWidth="219.0">
+               <children>
+                  <Text fx:id="varUsernameToolBar" fill="#ebebeb" layoutX="100.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
+                  <ImageView fx:id="varPhotoProfilToolBar" fitHeight="59.0" fitWidth="63.0" layoutX="8.0" layoutY="3.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/comments-xxl.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="notificationNumber" fill="#dd0d0d" layoutX="26.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children></Pane>
+      <ImageView fx:id="AccueilAdmin" fitHeight="74.0" fitWidth="77.0" layoutX="7.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/competences.png" />
+         </image>
+      </ImageView>
+      <TabPane fx:id="tabNotification" layoutX="-5.0" layoutY="88.0" prefHeight="534.0" prefWidth="1043.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="forumTab" text="Forum">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="520.0" prefWidth="1017.0">
+                     <children>
+                        <ScrollPane layoutX="7.0" prefHeight="510.0" prefWidth="1037.0">
+                           <content>
+                              <ListView fx:id="listProbleme" prefHeight="500.0" prefWidth="1033.0" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="projetTab" text="Projet">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="525.0" prefWidth="880.0">
+                     <children>
+                        <ScrollPane prefHeight="525.0" prefWidth="1043.0">
+                           <content>
+                              <ListView fx:id="listProjet" prefHeight="526.0" prefWidth="1030.0" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <AnchorPane fx:id="navList1" layoutX="-178.0" layoutY="233.0" opacity="0.76" prefHeight="76.0" prefWidth="266.0" style="-fx-background-color: transparent;" styleClass="whiteBackGround">
+         <children>
+            <Pane fx:id="menu1" layoutX="20.0" prefHeight="54.0" prefWidth="226.0">
+               <children>
+                  <Text fx:id="AdminProblemes" layoutX="-27.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROBLEMES" wrappingWidth="180.83470153808594">
+                     <font>
+                        <Font size="33.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <ImageView fitHeight="70.0" fitWidth="63.0" layoutX="188.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/probleme.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <Glow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane fx:id="navList2" layoutX="-174.0" layoutY="319.0" opacity="0.76" prefHeight="73.0" prefWidth="257.0" style="-fx-background-color: transparent;" styleClass="whiteBackGround">
+         <children>
+            <Pane fx:id="menu2" layoutX="-8.0" prefHeight="54.0" prefWidth="226.0">
+               <children>
+                  <Text fx:id="AdminUsers" layoutX="33.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Users" wrappingWidth="207.4871826171875">
+                     <font>
+                        <Font size="33.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <ImageView fitHeight="74.0" fitWidth="108.0" layoutX="165.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cooperative.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <Glow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane fx:id="navList" layoutX="-175.0" layoutY="159.0" opacity="0.76" prefHeight="66.0" prefWidth="259.0" style="-fx-background-color: transparent;" styleClass="whiteBackGround">
+         <children>
+            <Pane fx:id="menu" layoutX="-9.0" layoutY="6.0" prefHeight="54.0" prefWidth="226.0">
+               <children>
+                  <Text fx:id="AdminProjets" layoutX="14.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROJETS" wrappingWidth="165.83470153808594">
+                     <font>
+                        <Font size="33.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <ImageView fitHeight="74.0" fitWidth="92.0" layoutX="165.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+               <image>
+                  <Image url="@../images/startup.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <Glow />
+         </effect>
+      </AnchorPane>
+    
+    </children>
+</AnchorPane>

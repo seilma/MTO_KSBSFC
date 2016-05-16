@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="661.0" prefWidth="1024.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mto.cr.GUI.MonProfilController">
+    <stylesheets>
+        <URL value="@newCascadeStyleSheet.css" />
+    </stylesheets>
+        <children>
+      <TabPane layoutX="91.0" layoutY="85.0" prefHeight="558.0" prefWidth="933.0">
+         <tabs>
+            <Tab closable="false" text="PROFIL">
+               <content>
+                            <AnchorPane fx:id="GlobalAnchorID" minHeight="0.0" minWidth="0.0" prefHeight="510.0" prefWidth="926.0">
+                        <children>
+                           <ImageView fitHeight="198.0" fitWidth="954.0" layoutX="-12.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../images/Blurred-Background.jpg" />
+                              </image>
+                           </ImageView>
+                           <Label fx:id="varEmailHaut" layoutX="157.0" layoutY="69.0" text="email@email.com" textFill="WHITE">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                           </Label>
+                           <Label fx:id="varNomHaut" layoutX="158.0" layoutY="41.0" text="Nom Prenom" textFill="WHITE">
+                              <font>
+                                 <Font name="System Bold" size="18.0" />
+                              </font>
+                           </Label>
+                           <ImageView fx:id="photoProfil" fitHeight="112.0" fitWidth="113.0" layoutX="18.0" layoutY="12.0" pickOnBounds="true" styleClass="imageProfil">
+                              <image>
+                                 <Image url="@../../../../../MTOCrowdRise/web/uploads/profils/IMG_2099.JPG" />
+                              </image>
+                           </ImageView>
+                           <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="85.0" layoutX="-4.0" layoutY="147.0" stroke="#f2f2f2" strokeType="INSIDE" width="937.0" />
+                           <ImageView fitHeight="32.0" fitWidth="47.0" layoutX="502.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../images/comments-xxl.png" />
+                              </image>
+                           </ImageView>
+                           <ImageView fitHeight="32.0" fitWidth="47.0" layoutX="296.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../images/arrow-55-512.png" />
+                              </image>
+                           </ImageView>
+                           <ImageView fitHeight="32.0" fitWidth="47.0" layoutX="698.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../images/star-grey-md.png" />
+                              </image>
+                           </ImageView>
+                           <ImageView fitHeight="32.0" fitWidth="47.0" layoutX="89.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../images/facebook-like-xxl.png" />
+                              </image>
+                           </ImageView>
+                           <Label layoutX="98.0" layoutY="202.0" text="VOTES" textFill="#787878" />
+                           <Label layoutX="276.0" layoutY="202.0" text="PROJETS SUIVIS" textFill="#787878" />
+                           <Label layoutX="487.0" layoutY="202.0" text="COMMENTAIRES" textFill="#787878" />
+                           <Label layoutX="694.0" layoutY="202.0" text="FINANCEMENT" textFill="#787878" />
+                           <Label fx:id="varNbrVotes" layoutX="128.0" layoutY="171.0" text="1" textFill="#787878">
+                              <font>
+                                 <Font size="20.0" />
+                              </font>
+                           </Label>
+                           <Label fx:id="varNbrProjetsSuivis" layoutX="338.0" layoutY="171.0" text="1" textFill="#787878">
+                              <font>
+                                 <Font size="20.0" />
+                              </font>
+                           </Label>
+                           <Label fx:id="varNbrCommentaires" layoutX="548.0" layoutY="171.0" text="1" textFill="#787878">
+                              <font>
+                                 <Font size="20.0" />
+                              </font>
+                           </Label>
+                           <Label fx:id="varNbrFinancement" layoutX="738.0" layoutY="171.0" text="1" textFill="#787878">
+                              <font>
+                                 <Font size="20.0" />
+                              </font>
+                           </Label>
+                           <Label layoutX="72.0" layoutY="251.0" text="IDENTITÉ">
+                              <font>
+                                 <Font name="System Bold" size="15.0" />
+                              </font>
+                           </Label>
+                           <Label layoutX="46.0" layoutY="428.0" text="EXPÉRIENCE">
+                              <font>
+                                 <Font name="System Bold" size="15.0" />
+                              </font>
+                           </Label>
+                           <Separator layoutX="36.0" layoutY="406.0" prefHeight="4.0" prefWidth="669.0" />
+                           <Label fx:id="varNomPrenom" layoutX="186.0" layoutY="251.0" text="nom prenom" />
+                           <Label layoutX="186.0" layoutY="282.0" text="Né(e) le ">
+                              <font>
+                                 <Font name="System Bold" size="13.0" />
+                              </font>
+                           </Label>
+                           <Label layoutX="186.0" layoutY="314.0" text="Situation Professionnel :">
+                              <font>
+                                 <Font name="System Bold" size="13.0" />
+                              </font>
+                           </Label>
+                           <Label fx:id="varDataNaissance" layoutX="238.0" layoutY="282.0" text="04/05/1992" />
+                           <Label fx:id="varSituationProfessionnel" layoutX="349.0" layoutY="314.0" text="professionnel" />
+                           <Label layoutX="186.0" layoutY="344.0" text="Expérience Total :">
+                              <font>
+                                 <Font name="System Bold" size="13.0" />
+                              </font>
+                           </Label>
+                           <Label fx:id="varExpTot" layoutX="310.0" layoutY="345.0" text="0" />
+                           <Label fx:id="varSecteurActivite" layoutX="323.0" layoutY="428.0" text="0" />
+                           <Label layoutX="186.0" layoutY="427.0" text="Secteurs d'activité : ">
+                              <font>
+                                 <Font name="System Bold" size="13.0" />
+                              </font>
+                           </Label>
+                           <Label fx:id="varDomaine" layoutX="344.0" layoutY="456.0" text="0" />
+                           <Label layoutX="186.0" layoutY="455.0" text="domaine d'expérience :">
+                              <font>
+                                 <Font name="System Bold" size="13.0" />
+                              </font>
+                           </Label>
+                           <Label fx:id="varSecteurGeograph" layoutX="348.0" layoutY="483.0" text="0" />
+                           <Label layoutX="186.0" layoutY="483.0" text="Secteur géographique :">
+                              <font>
+                                 <Font name="System Bold" size="13.0" />
+                              </font>
+                           </Label>
+                        <Button fx:id="buttonModifierMonIdentite" layoutX="176.0" layoutY="371.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="248.0" styleClass="buttonLogin" text="MODIFIER MON IDENTITÉ" textFill="#f2f2f2" />
+                        <Button fx:id="buttonChangerPSW" layoutX="445.0" layoutY="371.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="248.0" styleClass="buttonWarning" text="CHANGER MON MOT DE PASSE" textFill="#fff5ea" />
+                        </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab closable="false" text="MES EXPERIENCES">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane layoutY="309.0" prefHeight="211.0" prefWidth="935.0">
+                           <content>
+                              <ListView fx:id="listExperiences" prefHeight="217.0" prefWidth="928.0" />
+                           </content>
+                        </ScrollPane>
+                        <ImageView fitHeight="198.0" fitWidth="954.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Blurred-Background.jpg" />
+                           </image>
+                        </ImageView>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="85.0" layoutX="-4.0" layoutY="147.0" stroke="#f2f2f2" strokeType="INSIDE" width="937.0" />
+                        <ImageView fitHeight="32.0" fitWidth="47.0" layoutX="89.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/facebook-like-xxl.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="32.0" fitWidth="47.0" layoutX="698.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/star-grey-md.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="32.0" fitWidth="47.0" layoutX="296.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/arrow-55-512.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="32.0" fitWidth="47.0" layoutX="502.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/comments-xxl.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#787878" layoutX="101.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VOTES" />
+                        <Text fill="#787878" layoutX="291.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROJETS SUIVIS" />
+                        <Text fill="#787878" layoutX="491.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COMMENTAIRES" />
+                        <Text fill="#787878" layoutX="691.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FINANCEMENT" />
+                        <Text fx:id="nbrVotePageExp" fill="#787878" layoutX="128.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="nbrProjSuivisPageExp" fill="#787878" layoutX="338.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="nbeCommPageExp" fill="#787878" layoutX="545.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="nbrFinancementPageExp" fill="#787878" layoutX="738.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <ImageView fx:id="photoProfilPageExp" fitHeight="112.0" fitWidth="113.0" layoutX="18.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/checked_checkbox.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="nomPrenomPageExp" fill="WHITE" layoutX="158.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="emailPageExp" fill="WHITE" layoutX="157.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#3c3c3c" layoutX="392.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Experiences">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="buttonAjouterExperienceMonProfil" layoutX="668.0" layoutY="257.0" mnemonicParsing="false" onAction="#AjouterExperienceMonProfil" prefHeight="18.0" prefWidth="204.0" styleClass="buttonWarningRec" text="Ajouter Experiences" textFill="#ed9010" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab closable="false" text="MES COMMENTAIRES">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane layoutX="-1.0" layoutY="18.0" prefHeight="502.0" prefWidth="933.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="491.0" prefWidth="924.0">
+                                 <children>
+                                    <ListView fx:id="listCommentaires" layoutX="178.0" layoutY="78.0" prefHeight="491.0" prefWidth="924.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab closable="false" text="MON PANIER">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="198.0" fitWidth="954.0" layoutX="-12.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Blurred-Background.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="photoProfilPageExp1" fitHeight="112.0" fitWidth="113.0" layoutX="18.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/checked_checkbox.png" />
+                           </image>
+                        </ImageView>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f2f2f2" height="85.0" layoutX="-4.0" layoutY="147.0" stroke="#f2f2f2" strokeType="INSIDE" width="937.0" />
+                        <ImageView fitHeight="32.0" fitWidth="47.0" layoutX="296.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/arrow-55-512.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#787878" layoutX="479.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COMMENTAIRES" />
+                        <Text fill="#787878" layoutX="276.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROJETS SUIVIS" />
+                        <ImageView fitHeight="32.0" fitWidth="47.0" layoutX="502.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/comments-xxl.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="32.0" fitWidth="47.0" layoutX="698.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/star-grey-md.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="nbrProjSuivisPageExp1" fill="#787878" layoutX="342.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="emailPageExp1" fill="WHITE" layoutX="157.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#787878" layoutX="684.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FINANCEMENT" />
+                        <Text fx:id="nomPrenomPageExp1" fill="WHITE" layoutX="158.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="nbeCommPageExp1" fill="#787878" layoutX="549.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="nbrVotePageExp1" fill="#787878" layoutX="133.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="32.0" fitWidth="47.0" layoutX="89.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/facebook-like-xxl.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="nbrFinancementPageExp1" fill="#787878" layoutX="746.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#787878" layoutX="101.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VOTES" />
+                        <Text layoutX="387.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MON PANIER">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <ScrollPane layoutY="274.0" prefHeight="251.0" prefWidth="933.0">
+                           <content>
+                              <ListView fx:id="listViewMonPanier" prefHeight="250.0" prefWidth="914.0" />
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <Pane fx:id="MonProfilMenu" layoutX="702.0" layoutY="-112.0" opacity="0.95" prefHeight="289.0" prefWidth="264.0" styleClass="monProfil" translateY="-350">
+         <children>
+            <Button fx:id="buttonAccederMonProfil" layoutX="11.0" layoutY="240.0" mnemonicParsing="false" onAction="#EnterProfileAc" prefHeight="42.0" prefWidth="238.0" styleClass="buttonLogin" text="Mon Profil" textFill="#f2ffdd">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Separator layoutX="8.0" layoutY="229.0" prefHeight="5.0" prefWidth="245.0" />
+            <ImageView fx:id="PhotoProfilMonProfil" fitHeight="64.0" fitWidth="69.0" layoutX="8.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/checked_checkbox.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="nomPrénomMonProfil" layoutX="86.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chiheb Khédhiri">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="emailMonProfil" layoutX="85.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="email@email.com" wrappingWidth="110.466552734375" />
+            <Text fill="#646464" layoutX="16.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Solde">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Text fill="#646464" layoutX="16.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mon panier">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Text fill="#646464" layoutX="16.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expériences">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Text fx:id="soldeMonProfil" fill="#646464" layoutX="80.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="200 " wrappingWidth="112.819580078125">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Text fill="#646464" layoutX="108.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Projets suivis..." wrappingWidth="134.6949462890625">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Text fill="#646464" layoutX="106.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Consulter mes expériences" wrappingWidth="144.767822265625">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Text fill="#646464" layoutX="116.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Consulter mes commentaires" wrappingWidth="144.767822265625">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Text fill="#646464" layoutX="16.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Commentaires">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Separator layoutX="8.0" layoutY="189.0" prefHeight="5.0" prefWidth="245.0" />
+            <Separator layoutX="8.0" layoutY="155.0" prefHeight="5.0" prefWidth="245.0" />
+            <Separator layoutX="8.0" layoutY="119.0" prefHeight="5.0" prefWidth="245.0" />
+            <Button layoutX="3.0" layoutY="122.0" mnemonicParsing="false" onAction="#EnterPanierAc" opacity="0.5" prefHeight="33.0" prefWidth="259.0" styleClass="buttonMonProfilSelect" />
+            <Button layoutX="3.0" layoutY="87.0" mnemonicParsing="false" onAction="#EnterSoldeAc" opacity="0.5" prefHeight="33.0" prefWidth="259.0" styleClass="buttonMonProfilSelect" />
+            <Button layoutX="3.0" layoutY="157.0" mnemonicParsing="false" onAction="#EnterExperienceAc" opacity="0.5" prefHeight="33.0" prefWidth="259.0" styleClass="buttonMonProfilSelect" />
+            <Button layoutX="3.0" layoutY="192.0" mnemonicParsing="false" onAction="#EnterCommentairesAc" opacity="0.5" prefHeight="33.0" prefWidth="259.0" styleClass="buttonMonProfilSelect" />
+         </children></Pane>
+      <Pane layoutX="-1.0" layoutY="-5.0" prefHeight="93.0" prefWidth="1026.0" styleClass="whiteBackGround">
+         <children>
+            <Pane fx:id="dropDownMenu" layoutX="695.0" layoutY="13.0" prefHeight="64.0" prefWidth="219.0">
+               <children>
+                  <Text fx:id="varUsernameToolBar" fill="#ebebeb" layoutX="100.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
+                  <ImageView fx:id="varPhotoProfilToolBar" fitHeight="59.0" fitWidth="63.0" layoutX="8.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/comments-xxl.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children></Pane>
+      <ImageView fx:id="home" fitHeight="74.0" fitWidth="77.0" layoutX="7.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/icon_home.png" />
+         </image>
+      </ImageView>
+        <AnchorPane fx:id="navList" layoutX="7.0" layoutY="115.0" opacity="0.76" prefHeight="66.0" prefWidth="259.0" style="-fx-background-color: transparent;" styleClass="whiteBackGround" translateX="-180" AnchorPane.bottomAnchor="482.0" AnchorPane.topAnchor="115.0">
+         <effect>
+            <Glow />
+         </effect>
+         <children>
+            <Pane fx:id="menu" prefHeight="54.0" prefWidth="226.0" />
+            <ImageView fitHeight="74.0" fitWidth="92.0" layoutX="172.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/startup.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="AccederProjets" layoutX="26.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROJETS" wrappingWidth="165.83470153808594">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Text>
+         </children>
+        </AnchorPane>
+      <AnchorPane fx:id="navList1" layoutX="7.0" layoutY="205.0" opacity="0.76" prefHeight="76.0" prefWidth="266.0" style="-fx-background-color: transparent;" styleClass="whiteBackGround" translateX="-180">
+         <children>
+            <Pane fx:id="menu1" prefHeight="54.0" prefWidth="226.0" />
+            <ImageView fitHeight="86.0" fitWidth="108.0" layoutX="188.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/perso-coop.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="AccederProfils" layoutX="26.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROFILS" wrappingWidth="165.83470153808594">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Text>
+         </children>
+         <effect>
+            <Glow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane fx:id="navList2" layoutX="7.0" layoutY="295.0" opacity="0.76" prefHeight="73.0" prefWidth="257.0" style="-fx-background-color: transparent;" styleClass="whiteBackGround" translateX="-180">
+         <children>
+            <Pane fx:id="menu2" prefHeight="54.0" prefWidth="226.0" />
+            <ImageView fitHeight="74.0" fitWidth="108.0" layoutX="172.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/cooperative.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="AccederForum" layoutX="26.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FORUM" wrappingWidth="165.83470153808594">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Text>
+         </children>
+         <effect>
+            <Glow />
+         </effect>
+      </AnchorPane>
+    
+    </children>
+</AnchorPane>

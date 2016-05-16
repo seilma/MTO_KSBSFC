@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="614.0" prefWidth="1115.0" styleClass="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mto.cr.GUI.AdminCommentaireController">
+    <stylesheets>
+        <URL value="@newCascadeStyleSheet.css" />
+    </stylesheets>
+        <children>
+      <ScrollPane layoutX="91.0" layoutY="253.0" prefHeight="399.0" prefWidth="1024.0" style="-fx-background-color: #F0FFFF;">
+         <content>
+            <ListView fx:id="listCom"  prefHeight="383.0" prefWidth="1025.0" />
+         </content>
+      </ScrollPane>
+      <Pane layoutX="-1.0" layoutY="-5.0" prefHeight="93.0" prefWidth="1116.0" styleClass="whiteBackGround">
+         <children>
+            <Pane fx:id="dropDownMenu" layoutX="695.0" layoutY="13.0" prefHeight="64.0" prefWidth="219.0">
+               <children>
+                  <Text fx:id="varUsernameToolBar" fill="#ebebeb" layoutX="100.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
+                  <ImageView fx:id="varPhotoProfilToolBar" fitHeight="59.0" fitWidth="63.0" layoutX="8.0" layoutY="3.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/comments-xxl.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="nombreNotification" fill="#dd0d0d" layoutX="26.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children></Pane>
+      <ImageView fx:id="home" fitHeight="74.0" fitWidth="77.0" layoutX="7.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/competences.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="497.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Commentaires" wrappingWidth="194.48721313476562">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TextField fx:id="AjouterComTxt" layoutX="136.0" layoutY="173.0" prefHeight="71.0" prefWidth="445.0" />
+      <Button fx:id="btnAjout" layoutX="609.0" layoutY="194.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="97.0" style="-fx-background-color: #deff4c;" text="Ajouter" textFill="#252524" />
+      <AnchorPane fx:id="navList1" layoutX="-178.0" layoutY="215.0"  opacity="0.76" prefHeight="76.0" prefWidth="266.0" style="-fx-background-color: transparent;" styleClass="whiteBackGround">
+         <children>
+            <Pane fx:id="menu1" prefHeight="54.0" prefWidth="226.0" />
+            <ImageView fitHeight="86.0" fitWidth="108.0" layoutX="188.0" layoutY="-8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/perso-coop.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="AccederProfils" layoutX="26.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROFILS" wrappingWidth="165.83470153808594">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="navList" layoutX="-178.0" layoutY="125.0"  opacity="0.76" prefHeight="66.0" prefWidth="259.0" style="-fx-background-color: transparent;" styleClass="whiteBackGround">
+         <children>
+            <ImageView fitHeight="74.0" fitWidth="92.0" layoutX="172.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/startup.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="AccederProjets" layoutX="26.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROJETS" wrappingWidth="165.83470153808594">
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Text>
+            <Pane fx:id="menu" layoutX="3.0" prefHeight="54.0" prefWidth="226.0" />
+         </children>
+      </AnchorPane>
+    
+    </children>
+</AnchorPane>

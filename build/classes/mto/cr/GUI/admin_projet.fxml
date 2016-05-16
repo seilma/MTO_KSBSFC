@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="614.0" prefWidth="1115.0" styleClass="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mto.cr.GUI.AdminProjetController">
+    <stylesheets>
+        <URL value="@newCascadeStyleSheet.css" />
+    </stylesheets>
+        <children>
+      <ScrollPane layoutX="91.0" layoutY="224.0" prefHeight="437.0" prefWidth="1024.0" style="-fx-background-color: #F0FFFF;">
+         <content>
+            <ListView fx:id="listProjet" onMousePressed="#EnterProfileAc" prefHeight="524.0" prefWidth="1022.0" />
+         </content>
+      </ScrollPane>
+      <Pane layoutX="-1.0" layoutY="-5.0" prefHeight="93.0" prefWidth="1116.0" styleClass="whiteBackGround">
+         <children>
+            <Pane fx:id="dropDownMenu" layoutX="695.0" layoutY="13.0" prefHeight="64.0" prefWidth="219.0">
+               <children>
+                  <Text fx:id="varUsernameToolBar" fill="#ebebeb" layoutX="100.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
+                  <ImageView fx:id="varPhotoProfilToolBar" fitHeight="59.0" fitWidth="63.0" layoutX="8.0" layoutY="3.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/comments-xxl.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="nombreNotification" fill="#dd0d0d" layoutX="26.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children></Pane>
+      <ImageView fx:id="home" fitHeight="74.0" fitWidth="77.0" layoutX="7.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/competences.png" />
+         </image>
+      </ImageView>
+        <AnchorPane fx:id="navList" layoutX="7.0" layoutY="115.0" opacity="0.76" prefHeight="66.0" prefWidth="259.0" style="-fx-background-color: transparent;" styleClass="whiteBackGround" translateX="-180" AnchorPane.bottomAnchor="482.0" AnchorPane.topAnchor="115.0">
+         <effect>
+            <Glow />
+         </effect>
+         <children>
+            <Pane fx:id="menu" prefHeight="54.0" prefWidth="226.0">
+               <children>
+                  <Text fx:id="AccederEnVote" layoutX="48.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EN VOTE" wrappingWidth="140.0">
+                     <font>
+                        <Font size="33.0" />
+                     </font>
+                  </Text>
+               </children></Pane>
+            <ImageView fitHeight="70.0" fitWidth="60.0" layoutX="193.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/partenaire.png" />
+               </image>
+            </ImageView>
+         </children>
+        </AnchorPane>
+      <AnchorPane fx:id="navList1" layoutX="7.0" layoutY="205.0" opacity="0.76" prefHeight="76.0" prefWidth="266.0" style="-fx-background-color: transparent;" styleClass="whiteBackGround" translateX="-180">
+         <children>
+            <Pane fx:id="menu1" prefHeight="54.0" prefWidth="226.0">
+               <children>
+                  <Text fx:id="AccederEnFinancement" layoutX="-87.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EN FINANCEMENT" wrappingWidth="276.83470153808594">
+                     <font>
+                        <Font size="33.0" />
+                     </font>
+                  </Text>
+               </children></Pane>
+            <ImageView fitHeight="53.0" fitWidth="92.0" layoutX="180.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/main-billets.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <Glow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane fx:id="navList2" layoutX="7.0" layoutY="295.0" opacity="0.76" prefHeight="73.0" prefWidth="257.0" style="-fx-background-color: transparent;" styleClass="whiteBackGround" translateX="-180">
+         <children>
+            <Pane fx:id="menu2" prefHeight="54.0" prefWidth="226.0">
+               <children>
+                  <Text fx:id="AccederFinis" layoutX="108.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FINIS" wrappingWidth="89.5">
+                     <font>
+                        <Font size="33.0" />
+                     </font>
+                  </Text>
+               </children></Pane>
+            <ImageView fitHeight="74.0" fitWidth="75.0" layoutX="191.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/pouce.png" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <Glow />
+         </effect>
+      </AnchorPane>
+      <Text layoutX="497.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROJETS" wrappingWidth="194.48721313476562">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <HBox layoutX="456.0" layoutY="150.0">
+         <children>
+            <TextField layoutX="456.0" layoutY="150.0" />
+            <MenuButton fx:id="rechercherButton" layoutX="643.0" layoutY="150.0" mnemonicParsing="false" styleClass="buttonMonProfilSelect" stylesheets="@MTOCrowdRise.css" text="Rechercher">
+              <items>
+                <MenuItem fx:id="TitreMenuItem" mnemonicParsing="false" onAction="#RechercherTitre" text="Titre" />
+                <MenuItem fx:id="UserMenuItem" mnemonicParsing="false" onAction="#RechercherUser" text="User" />
+                  <MenuItem fx:id="PaysMenuItem" mnemonicParsing="false" onAction="#RechercherPays" text="Pays" />
+              </items>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </MenuButton>
+         </children>
+      </HBox>
+    
+    </children>
+</AnchorPane>

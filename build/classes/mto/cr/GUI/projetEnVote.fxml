@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="AnchorPanProjetEnVote" prefHeight="600.0" prefWidth="1024.0" styleClass="whiteBackGround" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mto.cr.GUI.ProjetEnVoteController">
+    <stylesheets>
+        <URL value="@unprojet.css" />
+    </stylesheets>
+    <children>
+        <ScrollPane layoutY="14.0" prefHeight="648.0" prefWidth="1048.0">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1300.0" prefWidth="1024.0">
+                    <children>
+                        <ImageView fx:id="imgvUnProjetEnFinancement" fitHeight="373.0" fitWidth="796.0" focusTraversable="true" layoutX="104.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true" styleClass="shadow-effect" />
+                        <ImageView fitHeight="556.0" fitWidth="759.0" layoutX="81.0" layoutY="604.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/blocNoteProjetpng.png" />
+                            </image>
+                        </ImageView>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="12.0" layoutX="49.0" layoutY="579.0" stroke="BLACK" strokeType="INSIDE" styleClass="separator-rectangle" width="975.0" />
+                        <RadioButton fx:id="RadioLeProjet" layoutX="120.0" layoutY="644.0" mnemonicParsing="false" onAction="#RadioLeProjetAction" selected="true" text="Le projet">
+                            <toggleGroup>
+                                <ToggleGroup fx:id="radioProjet" />
+                            </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="RadioPlusDeDetail" layoutX="284.0" layoutY="644.0" mnemonicParsing="false" onAction="#RadioPlusDeDetailAction" text="Plus de détails" toggleGroup="$radioProjet" />
+                        <AnchorPane fx:id="anchorFinancement" layoutX="608.0" layoutY="100.0" onMouseClicked="#ChampsFinancementAction" onMouseExited="#applyOriginalOpacityFinancement" prefHeight="469.0" prefWidth="327.0">
+                            <children>
+                                <Label fx:id="LabelTitreProjet" alignment="CENTER" layoutX="93.0" layoutY="21.0" prefHeight="27.0" prefWidth="162.0" styleClass="label-titre-projet" text="LabelTitreProjet" />
+                                <Label fx:id="dynPaysProjet" alignment="CENTER" layoutX="145.0" layoutY="48.0" prefHeight="27.0" prefWidth="58.0" styleClass="label-pays-projet" text="pays" />
+                                <Label fx:id="DynSecteurProjet" alignment="CENTER" layoutX="130.0" layoutY="75.0" prefHeight="27.0" prefWidth="100.0" styleClass="label-pays-projet" text="Secteur" />
+                                <Label alignment="CENTER" layoutX="71.0" layoutY="189.0" prefHeight="27.0" prefWidth="207.0" text="En Vote !" textFill="#809201">
+                                    <font>
+                                        <Font name="Arial Bold Italic" size="36.0" />
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" layoutX="154.0" layoutY="256.0" prefHeight="27.0" prefWidth="65.0" styleClass="label-titre-projet" text="Votes" textFill="#80b201" />
+                                <Label fx:id="dynNbrVote" alignment="BASELINE_RIGHT" layoutX="109.0" layoutY="259.0" prefHeight="21.0" prefWidth="45.0" styleClass="label-head" text="n" />
+                                <Label fx:id="dynMoyenneVote" alignment="BASELINE_RIGHT" layoutX="132.0" layoutY="293.0" styleClass="label-head" text="nn" />
+                                <Label alignment="CENTER" layoutX="160.0" layoutY="290.0" prefHeight="28.0" prefWidth="26.0" styleClass="label-titre-projet" text="/5" textFill="#80b201" />
+                                <ImageView fx:id="btnVote" fitHeight="45.0" fitWidth="46.0" layoutX="178.0" layoutY="419.0" onMouseClicked="#VoterAction" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/valider-coop.png" />
+                                    </image>
+                                </ImageView>
+                                <Label fx:id="LabelJeVote" layoutX="95.0" layoutY="424.0" prefHeight="27.0" prefWidth="83.0" styleClass="label-titre-projet" text="Je vote !" />
+                                <Pane fx:id="paneStarVide" layoutX="42.0" layoutY="365.0" prefHeight="54.0" prefWidth="244.0">
+                                    <children>
+                                        <ImageView fx:id="starVide1" fitHeight="43.0" fitWidth="48.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../images/Star.png" />
+                                            </image>
+                                        </ImageView>
+                                        <ImageView fx:id="starVide2" fitHeight="43.0" fitWidth="48.0" layoutX="48.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../images/Star.png" />
+                                            </image>
+                                        </ImageView>
+                                        <ImageView fx:id="starVide3" fitHeight="43.0" fitWidth="48.0" layoutX="96.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../images/Star.png" />
+                                            </image>
+                                        </ImageView>
+                                        <ImageView fx:id="starVide4" fitHeight="43.0" fitWidth="48.0" layoutX="142.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../images/Star.png" />
+                                            </image>
+                                        </ImageView>
+                                        <ImageView fx:id="starVide5" fitHeight="43.0" fitWidth="48.0" layoutX="190.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../images/Star.png" />
+                                            </image>
+                                        </ImageView>
+                                    </children>
+                                </Pane>
+                                <Label fx:id="VoteDetail" alignment="CENTER" layoutX="36.0" layoutY="338.0" prefHeight="27.0" prefWidth="248.0" textFill="#2d9e1a">
+                                    <font>
+                                        <Font name="Arial Bold" size="24.0" />
+                                    </font>
+                                </Label>
+                        <Text fx:id="TextSuccesErrorVote" layoutX="22.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="275.205078125" />
+                            
+                            <ImageView fx:id="btnMap" fitHeight="32.0" fitWidth="35.0" layoutX="213.0" layoutY="46.0" onMouseClicked="#OpenMapAction" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/mapIcon.png" />
+                           </image>
+                        </ImageView>
+                            </children>
+                            <styleClass>
+                                <String fx:value="opacity-projet-affiche" />
+                                <String fx:value="whiteBackGround" />
+                                <String fx:value="shadow-effect" />
+                            </styleClass>
+                            
+                            
+                        </AnchorPane>
+                        <Button fx:id="btnRetour" alignment="CENTER" layoutX="691.0" layoutY="1221.0" mnemonicParsing="false" onAction="#RetourAction" prefHeight="53.0" prefWidth="194.0" styleClass="buttonLogin" text="Retour" />
+                        <Label fx:id="LabelIdProjetInvisible" layoutY="14.0" prefHeight="27.0" prefWidth="191.0" visible="false" />
+                        <AnchorPane fx:id="DétailsProjetBox" layoutX="620.0" layoutY="622.0" prefHeight="353.0" prefWidth="315.0" styleClass="details-projet">
+                            <children>
+                                <Label layoutX="59.0" layoutY="14.0" text="Date du dépot du projt " textFill="#80b201">
+                                    <font>
+                                        <Font name="Arial Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="DynDateDepoProjet" alignment="CENTER" layoutX="119.0" layoutY="43.0" prefHeight="27.0" prefWidth="76.0" text="dateD" />
+                                <Label layoutX="14.0" layoutY="106.0" styleClass="label-head" text="Moyenne vote :" />
+                                <Label fx:id="DynMoyenne" layoutX="216.0" layoutY="106.0" prefHeight="27.0" prefWidth="69.0" text="moyenne" />
+                                <Label fx:id="DynDefiscalisation" layoutX="216.0" layoutY="157.0" prefHeight="27.0" prefWidth="69.0" text="Defiscalisation" />
+                                <Label layoutX="14.0" layoutY="157.0" styleClass="label-head" text="Defiscalisation:" />
+                                <Label layoutX="14.0" layoutY="204.0" styleClass="label-head" text="Rendement minimal :" />
+                                <Label fx:id="DynRendement" layoutX="216.0" layoutY="204.0" prefHeight="27.0" prefWidth="69.0" text="rendement" />
+                                <Label layoutX="99.0" layoutY="274.0" prefHeight="42.0" prefWidth="189.0" styleClass="label-titre-projet" text="Votes restants sur 50" textFill="#80b201">
+                                    <font>
+                                        <Font name="Arial Bold" size="24.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="dynRestants" layoutX="40.0" layoutY="271.0" prefHeight="48.0" prefWidth="38.0" styleClass="nbrVoteRestant" text="50" />
+                            </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="anchorBlocNotePage" layoutX="81.0" layoutY="714.0" prefHeight="394.0" prefWidth="424.0" visible="false">
+                            <children>
+                                <ImageView fitHeight="395.0" fitWidth="424.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/blocNotePageProjet.jpg" />
+                                    </image>
+                                </ImageView>
+                                <Label fx:id="labelDescription" layoutX="14.0" layoutY="34.0" prefHeight="27.0" prefWidth="196.0" styleClass="label-head" text="Description :" />
+                                <Label fx:id="labelNormesPartenariats" layoutX="14.0" layoutY="178.0" prefHeight="27.0" prefWidth="262.0" styleClass="label-head" text="Normes et Partenariats : " />
+                                <Label fx:id="labelSlogan" layoutX="13.0" layoutY="280.0" prefHeight="27.0" prefWidth="156.0" styleClass="label-head" text="Slogan :" />
+                                <Text fx:id="DynDescriptionText" layoutX="13.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="normal-text" text="Description" wrappingWidth="313.205078125" />
+                                <Text fx:id="DynSlogan" layoutX="13.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="normal-text" text="Slogan" wrappingWidth="378.205078125" />
+                                <Text fx:id="DynNormePart" layoutX="14.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="normal-text" text="NormesP" wrappingWidth="213.205078125" />
+                                <Label fx:id="secteurNoteID" layoutX="13.0" layoutY="107.0" styleClass="label-head" text="Secteur du projet :" />
+                                <Label fx:id="SecteurIDNote" layoutX="13.0" layoutY="138.0" prefHeight="27.0" prefWidth="161.0" styleClass="normal-text" text="Secteur" />
+                            </children>
+                        </AnchorPane>
+                        <StackedBarChart fx:id="stackedBarChartID" layoutX="120.0" layoutY="767.0" prefHeight="231.0" prefWidth="347.0" title="Estimation par an (en Euro)">
+                            <xAxis>
+                                <CategoryAxis fx:id="CategoryAxisID" side="BOTTOM" />
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis fx:id="NumberAxisID" side="LEFT" />
+                            </yAxis>
+                        </StackedBarChart>
+                        <Label fx:id="LabelRendementDetail" layoutX="142.0" layoutY="1024.0" prefHeight="21.0" prefWidth="262.0" styleClass="label-pays-projet" text="Rendement annuel minimal :" />
+                        <Label fx:id="dynRendementAnnuel" layoutX="404.0" layoutY="1021.0" prefHeight="27.0" prefWidth="80.0" styleClass="normal-text" text="ra" visible="false" />
+                        <Text layoutX="568.0" layoutY="1052.0" opacity="0.56" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="normal-text" text="                              recommande aux épargnants d’appliquer des règles de vigilance avant tout investissement : l'investissement dans des projets comporte des risques de perte totale ou partielle du montant investi et des               d'illiquidité. N’investissez pas dans ce que vous ne comprenez pas parfaitement." textAlignment="JUSTIFY" wrappingWidth="406.0" />
+                        <Label layoutX="583.0" layoutY="1033.0" prefHeight="27.0" prefWidth="139.0" styleClass="label-titre-projet" text="MTOCrowdRise" />
+                        <Label layoutX="795.0" layoutY="1115.0" opacity="0.75" styleClass="alert" text="risques " />
+                          <Label fx:id="LabelSommeFinancement" layoutX="371.0" layoutY="527.0" prefHeight="27.0" prefWidth="227.0" styleClass="label-titre-projet" />
+                  <Pane fx:id="mapPane" layoutX="96.0" layoutY="100.0" maxHeight="466.0" maxWidth="515.0" prefHeight="466.0" prefWidth="515.0" visible="false" />
+                  <ImageView fx:id="mapCloseButn" fitHeight="48.0" fitWidth="52.0" layoutX="523.0" layoutY="108.0" onMouseClicked="#CloseMapAction" opacity="0.41" pickOnBounds="true" preserveRatio="true" visible="false">
+                     <image>
+                        <Image url="@../images/close.png" />
+                     </image>
+                  </ImageView>
+              
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+        
+        
+         <Pane fx:id="MonProfilMenu" layoutX="702.0" layoutY="-112.0" opacity="0.95" prefHeight="289.0" prefWidth="264.0" styleClass="monProfil" translateY="-350">
+         <children>
+            <Button fx:id="buttonAccederMonProfil" layoutX="11.0" layoutY="240.0" mnemonicParsing="false" onAction="#EnterProfileAc" prefHeight="42.0" prefWidth="238.0" styleClass="buttonLogin" text="Mon Profil" textFill="#f2ffdd">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Separator layoutX="8.0" layoutY="229.0" prefHeight="5.0" prefWidth="245.0" />
+            <ImageView fx:id="PhotoProfilMonProfil" fitHeight="64.0" fitWidth="69.0" layoutX="8.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/checked_checkbox.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="nomPrénomMonProfil" layoutX="86.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chiheb Khédhiri">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text fx:id="emailMonProfil" layoutX="85.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="email@email.com" wrappingWidth="110.466552734375" />
+            <Text fill="#646464" layoutX="16.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Solde">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Text fill="#646464" layoutX="16.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mon panier">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Text fill="#646464" layoutX="16.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Expériences">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Text fx:id="soldeMonProfil" fill="#646464" layoutX="80.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="200 " wrappingWidth="112.819580078125">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <Text fill="#646464" layoutX="108.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Projets suivis..." wrappingWidth="134.6949462890625">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Text fill="#646464" layoutX="106.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Consulter mes expériences" wrappingWidth="144.767822265625">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Text fill="#646464" layoutX="116.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Consulter mes commentaires" wrappingWidth="144.767822265625">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <Text fill="#646464" layoutX="16.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Commentaires">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Separator layoutX="8.0" layoutY="189.0" prefHeight="5.0" prefWidth="245.0" />
+            <Separator layoutX="8.0" layoutY="155.0" prefHeight="5.0" prefWidth="245.0" />
+            <Separator layoutX="8.0" layoutY="119.0" prefHeight="5.0" prefWidth="245.0" />
+            <Button layoutX="3.0" layoutY="122.0" mnemonicParsing="false" onAction="#EnterPanierAc" prefHeight="33.0" prefWidth="259.0" styleClass="buttonMonProfilSelect" />
+            <Button layoutX="3.0" layoutY="87.0" mnemonicParsing="false" onAction="#EnterSoldeAc" prefHeight="33.0" prefWidth="259.0" styleClass="buttonMonProfilSelect" />
+            <Button layoutX="3.0" layoutY="157.0" mnemonicParsing="false" onAction="#EnterExperienceAc" prefHeight="33.0" prefWidth="259.0" styleClass="buttonMonProfilSelect" />
+            <Button layoutX="3.0" layoutY="192.0" mnemonicParsing="false" onAction="#EnterCommentairesAc" prefHeight="33.0" prefWidth="259.0" styleClass="buttonMonProfilSelect" />
+         </children></Pane>
+    
+       
+        <Pane layoutX="-1.0" layoutY="-5.0" prefHeight="93.0" prefWidth="1048.0" styleClass="BlackBackGround">
+            <children>
+                <Pane fx:id="dropDownMenu" layoutX="697.0" layoutY="13.0" prefHeight="64.0" prefWidth="219.0">
+                    <children>
+                        <Text fill="#e1e1e1" layoutX="90.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
+                    </children>
+                </Pane>
+            </children>
+        </Pane>
+        <!--block content -->
+     
+     
+     
+     
+     
+        <!--endblock content -->
+        <ImageView fx:id="home" fitHeight="52.0" fitWidth="60.0" layoutX="77.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../images/immo.png" />
+            </image>
+        </ImageView>
+      
+        <AnchorPane fx:id="navList" layoutX="7.0" layoutY="115.0" onMouseClicked="#AccederProjetsAction" opacity="0.76" prefHeight="66.0" prefWidth="259.0" style="-fx-background-color: transparent;" styleClass="whiteBackGround" translateX="-180" AnchorPane.bottomAnchor="482.0" AnchorPane.topAnchor="115.0">
+         
+            <children>
+                <ImageView fitHeight="74.0" fitWidth="92.0" layoutX="172.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/startup.png" />
+                    </image>
+                </ImageView>
+                <Text layoutX="26.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROJETS" wrappingWidth="165.83470153808594">
+                    <font>
+                        <Font size="33.0" />
+                    </font>
+                </Text>
+                <Pane fx:id="menu" prefHeight="54.0" prefWidth="226.0" />
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="navList1" layoutX="7.0" layoutY="205.0" onMouseClicked="#AccederProfilsAction" opacity="0.76" prefHeight="76.0" prefWidth="266.0" style="-fx-background-color: transparent;" styleClass="whiteBackGround" translateX="-180">
+            <children>
+                <Pane fx:id="menu1" prefHeight="54.0" prefWidth="226.0" />
+                <ImageView fitHeight="86.0" fitWidth="108.0" layoutX="188.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/perso-coop.png" />
+                    </image>
+                </ImageView>
+                <Text layoutX="26.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROFILS" wrappingWidth="165.83470153808594">
+                    <font>
+                        <Font size="33.0" />
+                    </font>
+                </Text>
+            </children>
+        
+        </AnchorPane>
+        <AnchorPane fx:id="navList2" layoutX="7.0" layoutY="295.0" onMouseClicked="#AccederForumAction" opacity="0.76" prefHeight="73.0" prefWidth="257.0" style="-fx-background-color: transparent;" styleClass="whiteBackGround" translateX="-180">
+            <children>
+                <Pane fx:id="menu2" prefHeight="54.0" prefWidth="226.0" />
+                <ImageView fitHeight="74.0" fitWidth="108.0" layoutX="172.0" layoutY="-3.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/cooperative.png" />
+                    </image>
+                </ImageView>
+                <Text layoutX="26.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FORUM" wrappingWidth="165.83470153808594">
+                    <font>
+                        <Font size="33.0" />
+                    </font>
+                </Text>
+            </children>
+        
+        </AnchorPane>
+      
+      
+    </children>
+</AnchorPane>

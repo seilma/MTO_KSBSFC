@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="614.0" prefWidth="1115.0" styleClass="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mto.cr.GUI.AdminReglagesController">
+    <stylesheets>
+        <URL value="@newCascadeStyleSheet.css" />
+    </stylesheets>
+        <children>
+      <Pane layoutX="-1.0" layoutY="-5.0" prefHeight="93.0" prefWidth="1116.0" styleClass="whiteBackGround">
+         <children>
+            <Pane fx:id="dropDownMenu" layoutX="695.0" layoutY="13.0" prefHeight="64.0" prefWidth="219.0">
+               <children>
+                  <Text fx:id="varUsernameToolBar" fill="#ebebeb" layoutX="100.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" />
+                  <ImageView fx:id="varPhotoProfilToolBar" fitHeight="59.0" fitWidth="63.0" layoutX="8.0" layoutY="3.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../images/comments-xxl.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="nombreNotification" fill="#dd0d0d" layoutX="26.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </children></Pane>
+      <ImageView fx:id="home" fitHeight="74.0" fitWidth="77.0" layoutX="7.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/competences.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="449.0" layoutY="128.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reglages" wrappingWidth="219.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <HBox layoutX="450.0" layoutY="172.0" />
+      <ListView fx:id="listExperience" layoutX="718.0" layoutY="215.0" prefHeight="344.0" prefWidth="374.0" />
+      <Button fx:id="ajouterExpbtn" layoutX="987.0" layoutY="169.0" mnemonicParsing="false" style="-fx-background-color: #deff4c;" text="Ajouter" />
+      <TextField fx:id="ajoutexpTxt" layoutX="789.0" layoutY="169.0" />
+      <TextField fx:id="textProjet" layoutX="46.0" layoutY="247.0" prefHeight="31.0" prefWidth="128.0" />
+      <Button fx:id="btnProjet" layoutX="208.0" layoutY="247.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="144.0" styleClass="buttonMonProfilSelect" text="ProjetPDF" textFill="#75bb3c">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnuser" layoutX="208.0" layoutY="307.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="144.0" styleClass="buttonMonProfilSelect" text="UserPDF" textFill="#75bb3c">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="userTxt" layoutX="46.0" layoutY="307.0" prefHeight="31.0" prefWidth="128.0" />
+      <Button fx:id="btnProbleme" layoutX="208.0" layoutY="378.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="144.0" styleClass="buttonMonProfilSelect" text="ProblemePDF" textFill="#75bb3c">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="ProblemeTxt" layoutX="46.0" layoutY="378.0" prefHeight="31.0" prefWidth="128.0" />
+      <Button fx:id="btnProbleme1" layoutX="378.0" layoutY="378.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="144.0" styleClass="buttonMonProfilSelect" text="ProblemeTXT" textFill="#75bb3c">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnuser1" layoutX="378.0" layoutY="307.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="144.0" styleClass="buttonMonProfilSelect" text="UserTXT" textFill="#75bb3c">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnProjet1" layoutX="378.0" layoutY="247.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="144.0" styleClass="buttonMonProfilSelect" text="ProjetTXT" textFill="#75bb3c">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+    
+    </children>
+</AnchorPane>
